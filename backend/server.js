@@ -23,6 +23,8 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log("MongoDB connection error:", err));
 
+console.log("MongoDB URI:", process.env.MONGO_URI);
+
 // Basic route
 app.get("/", (req, res) => {
   res.send("Welcome to the Crypto Market App API!");
